@@ -1,5 +1,5 @@
 {% set name = "bigdecimal" %}
-{% set version = "3.1.9" %}
+{% set version = "3.2.2" %}
 
 package:
   name: rb-{{ name|lower }}
