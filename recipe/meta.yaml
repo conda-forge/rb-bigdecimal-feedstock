@@ -1,9 +1,11 @@
 {% set name = "bigdecimal" %}
 {% set version = "3.2.2" %}
+{% set build = "1" %}
 
 package:
   name: rb-{{ name|lower }}
   version: {{ version }}
+  build: {{ build }}
 
 source:
   - url: https://rubygems.org/downloads/{{ name }}-{{ version }}.gem
