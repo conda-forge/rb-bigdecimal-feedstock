@@ -1,6 +1,6 @@
 {% set name = "bigdecimal" %}
 {% set version = "3.2.2" %}
-{% set sha256 "39085f76b495eb39a79ce07af716f3a6829bc35eb44f2195e2753749f2fa5adc" %}
+{% set sha256 = "39085f76b495eb39a79ce07af716f3a6829bc35eb44f2195e2753749f2fa5adc" %}
 {% set build = "1" %}
 
 package:
