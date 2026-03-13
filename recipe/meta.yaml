@@ -1,5 +1,5 @@
 {% set name = "bigdecimal" %}
-{% set version = "3.1.9" %}
+{% set version = "3.2.0" %}
 
 package:
   name: rb-{{ name|lower }}
@@ -7,20 +7,20 @@ package:
 
 source:
   - url: https://rubygems.org/downloads/{{ name }}-{{ version }}.gem
-    sha256: 2ffc742031521ad69c2dfc815a98e426a230a3d22aeac1995826a75dabfad8cc
+    sha256: f220c34e07d98b04e02eb23193bee436fab9afcd551f43dce8837a1b4aa80762
 
 build:
   number: 0
   script:
     - gem install -N -l -V --norc --ignore-dependencies {{ name }}-{{ version }}.gem
     - gem unpack {{ name }}-{{ version }}.gem
-  skip: True  # [win]
+  skip: true  # [win]
 
 requirements:
   build:
-      - {{ compiler('c') }}
-      - {{ stdlib('c') }}
-      - make
+    - {{ compiler('c') }}
+    - {{ stdlib('c') }}
+    - make
   host:
     - ruby
   run:
