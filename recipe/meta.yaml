@@ -1,5 +1,7 @@
 {% set name = "bigdecimal" %}
-{% set version = "3.1.9" %}
+{% set version = "3.2.2" %}
+{% set sha256 = "39085f76b495eb39a79ce07af716f3a6829bc35eb44f2195e2753749f2fa5adc" %}
+{% set build = "1" %}
 
 package:
   name: rb-{{ name|lower }}
@@ -7,10 +9,10 @@ package:
 
 source:
   - url: https://rubygems.org/downloads/{{ name }}-{{ version }}.gem
-    sha256: 2ffc742031521ad69c2dfc815a98e426a230a3d22aeac1995826a75dabfad8cc
+    sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: {{ build }}
   script:
     - gem install -N -l -V --norc --ignore-dependencies {{ name }}-{{ version }}.gem
     - gem unpack {{ name }}-{{ version }}.gem
